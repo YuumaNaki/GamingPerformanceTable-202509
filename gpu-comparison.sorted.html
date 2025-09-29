@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GPU性能比較表（TFLOPS）</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            font-weight: bold;
+        }
+
+        .highlight:hover {
+            background-color: #ffe69c;
+        }
+
+        .stronger {
+            color: #28a745;
+            font-weight: 600;
+        }
+
+        .weaker {
+            color: #dc3545;
+            font-weight: 600;
+        }
+
+        .notes {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .notes h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .notes ul {
+            list-style-position: inside;
+            line-height: 1.8;
+        }
+
+        .notes li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .content {
+                padding: 15px;
+            }
+
+            th, td {
+                padding: 10px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>🎮 GPU性能比較表</h1>
+<p class="subtitle">ゲーム機 vs Radeon 610M（TFLOPS基準）</p>
+</header>
+<div class="content">
+<table>
+<tr>
+<th>デバイス</th>
+<th>GPU性能（TFLOPS）</th>
+<th>Radeon 610Mとの比較</th>
+</tr>
+<tr>
+<td>PlayStation 2</td>
+<td>0.006</td>
+<td class="weaker">約96倍弱い</td>
+</tr>
+<tr>
+<td>Nintendo Switch（携帯モード）</td>
+<td>0.18</td>
+<td class="weaker">約3.2倍弱い</td>
+</tr>
+<tr>
+<td>PlayStation 3</td>
+<td>0.23</td>
+<td class="weaker">約2.5倍弱い</td>
+</tr>
+<tr>
+<td>Xbox 360</td>
+<td>0.24</td>
+<td class="weaker">約2.4倍弱い</td>
+</tr>
+<tr>
+<td>Nintendo Switch（ドックモード）</td>
+<td>0.39</td>
+<td class="weaker">約1.5倍弱い</td>
+</tr>
+<tr class="highlight">
+<td>🎯 AMD Radeon 610M</td>
+<td>0.5～0.6</td>
+<td style="text-align: center;">基準</td>
+</tr>
+<tr>
+<td>Xbox One</td>
+<td>1.31</td>
+<td class="stronger">約2.3倍強い</td>
+</tr>
+<tr>
+<td>PlayStation 4</td>
+<td>1.84</td>
+<td class="stronger">約3.3倍強い</td>
+</tr>
+</table>
+<div class="notes">
+<h3>📊 ポイント</h3>
+<ul>
+<li><strong>Radeon 610M</strong>は、PS3/Xbox 360世代を明確に上回る性能</li>
+<li>初代Nintendo Switchよりもやや高性能</li>
+<li>ただし、PS4/Xbox One世代には届かない</li>
+<li>統合GPU（iGPU）としては非常に優秀な部類</li>
+</ul>
+<h3 style="margin-top: 20px;">⚠️ 注意事項</h3>
+<ul>
+<li>TFLOPsは理論上の浮動小数点演算性能です</li>
+<li>実際のゲーム性能は、アーキテクチャの効率、メモリ帯域幅、最適化などに大きく左右されます</li>
+<li>あくまで大まかな目安としてご参考ください</li>
+</ul>
+</div>
+</div>
+<footer>
+<p>作成日: 2025年9月30日 | Radeon 610M搭載 Ryzen 9 7940HS</p>
+</footer>
+</div>
+</body>
+</html>
